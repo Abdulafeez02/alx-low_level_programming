@@ -1,7 +1,9 @@
+#include<stdio.h>
+
 /**
  * main - Entry point
  *
- * Return - Always (0), successful
+ * Return: Always 0 (Success)
  *
  * return value of main - print out the size of various types on computer
  *
