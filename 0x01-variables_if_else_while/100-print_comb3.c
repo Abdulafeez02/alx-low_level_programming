@@ -1,4 +1,4 @@
-#inlcude<stdio.h>
+#include<stdio.h>
 
 /**
  * main - prints some dual digits
@@ -10,24 +10,20 @@
 
 int main(void)
 {
-	int i, j, k;
-	i = 0;
-	while (i < 100)
+	int num, numm;
+	
+	for (num = 0; num < 9; num++)
 	{
-		j = i % 10; /* singles digit */
-		k = i / 10; /* doubles digit */
-		if (k < j)
+		for (numm = num + 1; numm < 10; numm++)
 		{
-			putchar(k + '0');
-			putchar(j + '0');
-			if (i < 89)
-			{
-				putchar(44);
-				putchar(32);
-			}
+			putchar((num % 10) + '0');
+			putchar((numm % 10) + '0');
+			if (num == 8 && numm == 9)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
-		i++;
 	}
-	putchar('\n');
+	putchar('\n')
 	return (0);
 }
