@@ -3,12 +3,11 @@
 
 /**
  *
- *  main - print quote
+ * main - Print quote
  *
- *  Description: prints Dors's quote
- *  Return: Always 1 (Success)
+ * Description: prints Dors's quote
+ * Return: Always 1 (Success)
  *
- * 
  */
 
 int main(void)
