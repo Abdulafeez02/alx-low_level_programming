@@ -7,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 
-int main(vioid)
+int main(void)
 {
 	int num;
 
