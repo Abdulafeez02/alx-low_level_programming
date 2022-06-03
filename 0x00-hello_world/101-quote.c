@@ -2,7 +2,6 @@
 #include <unistd.h>
 
 /**
- *
  * main - Print quote
  *
  * Description: prints Dors's quote
