@@ -15,5 +15,5 @@ int _isalpha(int c)
 		if (letter == c )
 			num = 1;
 	}
-	return (0);
+	return (num);
 }
