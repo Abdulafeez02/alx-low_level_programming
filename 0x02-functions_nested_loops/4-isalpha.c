@@ -14,7 +14,7 @@ int _isalpha(int c)
 	letter2 = 'A';
 	while (letter <= 'z' && letter2 <= 'Z')
 	{
-		if ((letter == c) or (letter2 == c))
+		if ((letter == c) || (letter2 == c))
 		{
 			num = 1;
 		}
