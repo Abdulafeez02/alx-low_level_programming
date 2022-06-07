@@ -7,13 +7,21 @@
 
 int _isalpha(int c)
 {
-	char letter;
-	int num;
+	char letter2,letter;
+	int num = 0;
 
-	for (letter='a'; letter <= 'z'; letter++)
+	letter = 'a' ;
+	letter2 = 'A';
+	while (letter <= 'z' && letter2 <= 'Z')
 	{
-		if (letter == c )
+		if ((letter == c) or (letter2 == c))
+		{
 			num = 1;
+		}
+		else
+		{
+			continue;
+		}
 	}
 	return (num);
 }
