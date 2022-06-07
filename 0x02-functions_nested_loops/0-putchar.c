@@ -7,8 +7,10 @@
  *
  */
 
-it main(void)
+int main(void)
 {
-	printf("_putchar\n");
+	char a = _putchar;
+	
+	_putchar(a);
 	return (0);
 }
