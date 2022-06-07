@@ -1,1 +1,1 @@
-thisi is good
+this is a readme
