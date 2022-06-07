@@ -6,12 +6,20 @@
  * Return: Always 0 (Success)
  */
 
-int main(void)
+char print_alphabet(void)	
 {
-	char = letter;
+	char letter;
 
 	for (letter='a'; letter <= 'z'; letter++)
+	{
 		putchar(letter);
+	}
 	putchar('\n');
+	return (0);
+}
+
+int main(void)
+{
+	print_alphabet();
 	return (0);
 }
