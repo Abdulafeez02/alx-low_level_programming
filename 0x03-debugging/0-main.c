@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
- * main - Entry point
  * positive_or_negative -  returns if an integer is positive
  * or negative
- * 
  * Retrun: Always 0 (Success)
  */
 
