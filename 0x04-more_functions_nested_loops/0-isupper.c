@@ -4,6 +4,9 @@
  * @c: the character to be checked
  * _isupper - returns 1 if an alphabet is upper case
  * Return: 1 if character is upper , 0 otherwise
+ */
+ 
+/**
  * Auth: Brennan D Barban
  * File: 0-isupper.c
  */
