@@ -12,10 +12,10 @@ int _isupper(int c)
 	letter = 'A';
 	while (letter < 'Z')
 	{
-		if (letter == ((c % 10)+ '0'))
-			_putchar(49);
+		if (c == letter)
+			return (1);
 		else
-			_putchar(48);
-		return (0)
+			return (0)
 	}
+	letter++;
 }
