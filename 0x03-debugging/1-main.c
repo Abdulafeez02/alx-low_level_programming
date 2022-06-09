@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#inlcude <stdio.h>
 
 /**
  * main - causes an infinite loop
