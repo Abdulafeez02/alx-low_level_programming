@@ -2,7 +2,7 @@
 
 /**
  * _strlen - returns the length of the string
- * @s: a character 
+ * @s: a character
  * Return: count
  *
  */
@@ -10,6 +10,7 @@
 int _strlen(char *s)
 {
 	int count = 0;
+
 	while (*(s + count) != '\0')
 		count++;
 	return (count);
