@@ -1,43 +1,77 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * str_concat - concatenates two strings.
- * @s1: first string.
- * @s2: second string.
+ * count_word - helper function to count the number of words in a string
+ * @s: string to evaluate
  *
- * Return: pointer of an array of chars
+ * Return: number of words
  */
-char *str_concat(char *s1, char *s2)
+int count_word(char *s)
 {
-	char *strout;
-	unsigned int i, j, k, limit;
+	int flag, c, w;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	flag = 0;
+	w = 0;
 
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-
-	for (j = 0; s2[j] != '\0'; j++)
-		;
-
-	strout = malloc(sizeof(char) * (i + j + 1));
-
-	if (strout == NULL)
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		free(strout);
-		return (NULL);
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
+		{
+			flag = 1;
+			w++;
+		}
 	}
 
-	for (k = 0; k < i; k++)
-		strout[k] = s1[k];
+	return (w);
+}
+/**
+ * **strtow - splits a string into words
+ * @str: string to split
+ *
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
+ */
+char **strtow(char *str)
+{
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-	limit = j;
-	for (j = 0; j <= limit; k++, j++)
-		strout[k] = s2[j];
+	while (*(str + len))
+		len++;
+	words = count_word(str);
+	if (words == 0)
+		return (NULL);
 
-	return (strout);
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
+	if (matrix == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
+	{
+		if (str[i] == ' ' || str[i] == '\0')
+		{
+			if (c)
+			{
+				end = i;
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
+					return (NULL);
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+				matrix[k] = tmp - c;
+				k++;
+				c = 0;
+			}
+		}
+		else if (c++ == 0)
+			start = i;
+	}
+
+	matrix[k] = NULL;
+
+	return (matrix);
 }
